@@ -7,11 +7,14 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
+const path = require("path");
+const postsRoutes = require("./routes/posts");
+
 mongoose
   .connect(
     "mongodb+srv://manthanank:" +
       process.env.MONGO_ATLAS_PW +
-      "@cluster0.re3ha3x.mongodb.net/auth"
+      "@cluster0.re3ha3x.mongodb.net/mean-app"
     // "mongodb+srv://max:QuBqs0T45GDKPlIG@cluster0-ntrwp.mongodb.net/node-angular?retryWrites=true"
   )
   .then(() => {
@@ -23,6 +26,7 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/images", express.static(path.join("backend/images")));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -37,6 +41,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/api/posts", postsRoutes);
 app.use("/api/user", userRoutes);
 
 module.exports = app;
