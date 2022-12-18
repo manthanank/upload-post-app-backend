@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-expressjs-mongodb",
+  "name": "upload-post-app-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manthanank/nodejs-expressjs-mongodb.git"
+    "url": "git+https://github.com/manthanank/upload-post-app-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manthanank/nodejs-expressjs-mongodb/issues"
+    "url": "https://github.com/manthanank/upload-post-app-backend/issues"
   },
-  "homepage": "https://github.com/manthanank/nodejs-expressjs-mongodb#readme",
+  "homepage": "https://github.com/manthanank/upload-post-app-backend#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
